@@ -61,7 +61,7 @@ Usage:
 
 perl /path/rna_to_dna.pl <sequences.fasta>
 
-# sRNA_count_comparison.pl
+# srna_count_comparison.pl
 
 Perl script to print counting data from the eXpress output (https://pachterlab.github.io/eXpress/) of two different samples into a unique tab-delimited file and to calculate fold change and log2FC of the number of sRNAs mapping transcripts in these two samples.
 
