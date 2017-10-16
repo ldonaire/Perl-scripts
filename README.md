@@ -1,6 +1,8 @@
 # Perl-scripts
 Perl scripts to analyze smallRNAseq data from plant viruses
 
+By Livia Donaire (CEBAS-CSIC)
+
 # countfq_20to26.pl
 
 Perl script to count sRNA sequences of 20 to 26 nts in length from a fastq file and to calculate the percentage of each sRNA size class comparing to the total number of sequences analyzed.
