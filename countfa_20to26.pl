@@ -13,12 +13,12 @@ unless ($ARGV[0]) {
   die "Usage: perl $0 <sequences.fasta>\n";
 }
 # do the work 
-&fq_length_distribution($ARGV[0]);
+&fa_length_distribution($ARGV[0]);
 
 exit;
 
 # subroutine to do the work
-sub fq_length_distribution ($) {
+sub fa_length_distribution ($) {
   my $infile = shift;
 
   # global variables
@@ -29,7 +29,7 @@ sub fq_length_distribution ($) {
   # read input FASTA file with Bioperl
   my $inseq = Bio::SeqIO->new('-file'=>$infile, '-format'=>'fasta');
 
-  # loop for each sequence at input FASTQ file
+  # loop for each sequence at input FASTA file
   while (my $seqobj = $inseq->next_seq) {
       my $seq = $seqobj->seq();		# get the sequence
       my $length = length($seq); 	# get the length of the sequence
