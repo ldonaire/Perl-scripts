@@ -9,7 +9,7 @@ use Bio::SearchIO;	#  Bioperl
 
 # check for proper input parameters
 unless ($ARGV[0]) {
-  die "Usage: perl $0 <sequences.fastq>\n";
+  die "Usage: perl $0 <sequences.fasta>\n";
 }
 
 # subrutine to do the work 
@@ -34,15 +34,14 @@ sub nt_comp ($) {
   my $perG = 0;
   my $perN = 0;
 
-  # read input FASTQ file with Bioperl
+  # read input FASTA file with Bioperl
   my $inseq = Bio::SeqIO->new('-file'=>$infile, '-format'=>'fasta');
 
   print "Checking sequences...\n";
 
-  # loop for each sequence at input FASTQ file
+  # loop for each sequence at input FASTA file
   while (my $seqobj = $inseq->next_seq) {
       my $seq = $seqobj->seq();			# get the sequence
-      #my $id = $seqobj->display_id();	# get the name
       $countID++; #count total number of sequences analyzed
 
 		if ($seq =~ /^A\w+/) {
