@@ -10,7 +10,7 @@ use Bio::SearchIO;	#  Bioperl
 
 # check for proper input parameters
 unless ($ARGV[0]) {
-  die "Usage: perl $0 <sequences.fastq>\n";
+  die "Usage: perl $0 <sequences.fasta>\n";
 }
 # do the work 
 &fq_length_distribution($ARGV[0]);
@@ -24,9 +24,9 @@ sub fq_length_distribution ($) {
   # global variables
   my ($total, $length20, $length21, $length22, $length23, $length24, $length25, $length26)=0;
 
-  print "Parsing fastq file, please wait...\n";
+  print "Parsing fasta file, please wait...\n";
 
-  # read input FASTQ file with Bioperl
+  # read input FASTA file with Bioperl
   my $inseq = Bio::SeqIO->new('-file'=>$infile, '-format'=>'fasta');
 
   # loop for each sequence at input FASTQ file
